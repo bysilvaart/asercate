@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+
+:root{
+    --title_color: #155F52;
+    --text_color: #636363;
+    --primary-button_color: #155F52;
+    --primary-button_color-hover: #114b41;
+    --secondary-button_color: rgba(21, 95, 82, 0.1);
+    --terciary-button_color: #155F52;
+    --border-radius_buttons: 8px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+}
+
+
+.website_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 40px;
+}
+
+.banner{
+    width: 360px;
+    height: 516px;
+    border-radius: 16px;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    width: 380px;
+    height: 100%;
+
+}
+
+.info_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.brand{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logo{
+    width: 190px;
+}
+
+.brand p{
+  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: var(--text_color);    
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.title h2{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--title_color);
+}
+
+.title p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--text_color);
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding-right: 16px;
+    transition: all 0.3s;
+}
+
+.social-media>a:hover{
+    background-color: var(--secondary-button_color);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.social-media img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+
+    background: var(--secondary-button_color);
+    border-radius: var(--border-radius_buttons);
+}
+
+.social-media p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--text_color);    
+}
+
+.buttons_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.buttons_container a{
+    width: 100%;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.btn-terciary{
+    border: 1px solid var(--terciary-button_color);
+    border-radius: 8px;
+    color: var(--terciary-button_color);
+    transition: all 0.3s;
+}
+
+.btn-terciary:hover{
+    background-color: var(--terciary-button_color);
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-primary{
+    border-radius: 8px;
+    background-color: var(--primary-button_color);
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover{
+    background-color: var(--primary-button_color-hover) ;
+    transition: all 0.5s;
+}
+
+.buttons_row{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+@media only screen and (max-width: 760px) {
+
+    .website_container{
+        height: 80vh;
+    }
+
+    .banner{
+        display: none !important;
+    }
+
+    .container{
+        width: 300px;
+    }
+
+    .brand, .title h2, .title p, .social-media{
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-media a{
+        flex-direction: column;
+    }
+}
