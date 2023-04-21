@@ -39,7 +39,14 @@ body{
     width: 360px;
     height: 516px;
     border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 
+}
+
+.banner img{
+    height: 100%;
 }
 
 .container{
