@@ -8,6 +8,7 @@
     <title>HeadHunters - Asercate</title>
 </head>
 <body>
+    
     <nav>
         <a href="index.html">
             <img src="img/logo.svg" alt="">
@@ -52,9 +53,12 @@
 
     <div class="postulacion">
         <h3><b>Llena el siguiente formulario</b><br>
-            para postular a este cargo.</h3>
-        <form action="">
+            para postular a este cargo.
+        </h3>
+        <form id="contact-form" method="post" action="/send/" enctype="multipart/form-data">
             <div>
+                <label id="code">001</label>
+                <label id="rol">Gerente Produccion</label>
                 <h3>Datos personales</h3>
                 <div>
                     <label for="name">Nombre</label>
@@ -80,18 +84,29 @@
                     <input type="text" id="profesion" placeholder="Ingresa tu profesión">
                 </div>
                 <div>
-                    <label for="experiencia">Años de experiencia</label>
-                    <input type="text" id="experiencia" placeholder="20 años">
+                    <label for="rent">Renta líquida esperada</label>
+                    <select name="rent" id="rent">
+                        <option value="De $2.000.000 a $3.000.000">De $2.000.000 a $3.000.000</option>
+                        <option value="De $3.000.000 a $4.000.000">De $3.000.000 a $4.000.000</option>
+                        <option value="De $4.000.000 a $5.000.000">De $4.000.000 a $5.000.000</option>
+                        <option value="Más de $5.000.000">Más de $5.000.000</option>
+                    </select>   
                 </div>
                 <div>
-                    <label for="renta">Renta líquida esperada</label>
-                    <input type="text" id="renta" placeholder="CLP 0">
+                    <label for="experience">Años de experiencia</label>
+                    <select name="experience" id="experience">
+                        <option value="10 años">10 años</option>
+                        <option value="15 años">15 años</option>
+                        <option value="20 años">20 años</option>
+                        <option value="25 años">25 años</option>
+                        <option value="30 años">30 años</option>
+                    </select>   
                 </div>
             </div>
             <div class="options">
                 <h3>Disponibilidad a cambio de residencia</h3>
                 <div class="options-group">
-                    <div class="option">
+                    <div class="option" for="si">
                         <input type="radio" id="si" name="cambio-residencia" value="Si">
                         <label for="si">Si</label><br>
                     </div>
@@ -105,27 +120,28 @@
                 <h3>Nivel de inglés</h3>
                 <div class="options-group">
                     <div class="option">
-                        <input type="radio" id="basico" name="cambio-residencia" value="Básico">
+                        <input type="radio" id="basico" name="english" value="Básico">
                         <label for="basico">Básico</label><br>
                     </div>
                     <div class="option">
-                        <input type="radio" id="medio" name="cambio-residencia" value="Medio">
+                        <input type="radio" id="medio" name="english" value="Medio">
                         <label for="medio">Medio</label><br>
                     </div>
                     <div class="option">
-                        <input type="radio" id="alto" name="cambio-residencia" value="Alto">
+                        <input type="radio" id="alto" name="english" value="Alto">
                         <label for="alto">Alto</label><br>
                     </div>
                 </div>
             </div>
-            <a href="" class="btn-secondary btn-full">
-                <p>Subir curriculum</p>
-                <img src="img/document-upload.svg" alt="">
-            </a>
-        </form>
-    </div>
 
-    <a href="" class="btn-primary btn-full">Postular a este cargo</a>
-    
+            <label class="btn-secondary btn-full file-upload" for="file-upload" >Subir Curriculum <img src="img/document-upload.svg" alt=""></label>
+            <input id="file-upload" type="file" />
+
+            <button type="submit" class="btn-primary btn-full">Enviar</button>
+        </form>
+        <div id="status"></div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

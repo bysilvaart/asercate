@@ -8,6 +8,13 @@
     --secondary-button_color: rgba(21, 95, 82, 0.1);
     --terciary-button_color: #155F52;
     --border-radius_buttons: 8px;
+    --max-width: 720px;
+}
+
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 *{
@@ -24,13 +31,20 @@ body{
 
     display: flex;
     width: 100vw;
+
     height: 100%;
     padding: 16px 16px 40px 16px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    align-content: center;
     justify-content: flex-start;
     gap: 24px;
+
+    width: 100%;
+    max-width: var(--max-width);
+    
 }
+
 
 nav{
     display: flex;
@@ -38,6 +52,7 @@ nav{
     align-items: center;
     align-self: stretch;
     width: 100%;
+    max-width: var(--max-width);
 }
 
 nav img:nth-child(1){
@@ -49,6 +64,7 @@ nav img:nth-child(1){
 
 .btn-primary{
     display: flex;
+    flex-direction: row;
     height: 48px;
     padding: 4px 28px;
     justify-content: center;
@@ -69,13 +85,24 @@ nav img:nth-child(1){
     letter-spacing: 0.25px;
 }
 
+.btn-primary:hover{
+    background: var(--Primary, #048054);
+}
+
+.btn-primary:active{
+    background: var(--Primary, #035a3c);
+}
+
 .btn-secondary{
     display: flex;
+    flex-direction: row;
     height: 48px;
     padding: 4px 28px;
     justify-content: center;
     align-items: center;
     align-self: stretch;
+
+    width: fit-content;
 
     border-radius: 16px;
     border: 1px solid #175F53;
@@ -89,6 +116,10 @@ nav img:nth-child(1){
     letter-spacing: 0.25px;
 
     text-decoration: none;
+}
+
+.btn-secondary:hover{
+    background-color: #bedad0;
 }
 
 .btn-secondary>p, .btn-link>p{
