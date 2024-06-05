@@ -31,34 +31,49 @@
             </div>
         </div>
         <div class="description-texts">
-            <h1>Gerente Produccion</h1>
-            <p>Nos encontramos en la busqueda para importante Holding Agroindustrial de un Ingeniero Agronomo para liderar el manejo productivo de aproximadamente 1.000 hectareas, dedicadas a cultivos de carozos, frutos secos y arandanos.<br>
-                Las responsabilidades incluyen planificar, coordinar y controlar todas las actividades, manejos agronomicos y gestion de los capos fruticolas a su cargo
+            <h1>Gerente Agrícola</h1>
+            <p>Importante empresa Agroindustrial busca profesional para dirigir 4 campos ubicados en la VI región con frutales de Carozos, Kiwi, Uva de Mesa y Cítricos
+                El Cargo reporta a Gerente General y mensualmente al directorio
+                Debe establecer y controlar KPI
+                Liderar proyectos de expansión y renovación.
             </p>
             <div>
                 <h3>Requisitos:</h3>
                 <ul>
-                    <li>Ingeniero Agronomo.</li>
-                    <li>Minimo 5 años de experiencia liderando equipos agricolas o departamentos de produccion en exportadoras de fruta fresca.</li>
-                    <li>Amplio conocimiento tecnico en carozos y habilidad para liderar proyectos desde cero.</li>
+                    <li>Ingeniero Agrícola, Ingeniero Civil o afín</li>
+                    <li>Residencia en la VI región</li>
+                    <li>Inglés intermedio</li>
+                    <li>Sólidos conocimientos en Office</li>
+                    <li>Nociones en derecho laboral</li>
+                    <li>Experiencia comprobada mayor a 5 años</li>
+                    <li>Habilidades para trabajar en equipo y manejo de personal</li>
+                    <li>Proactividad y reactividad</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Se ofrece:</h3>
+                <ul>
+                    <li>Renta de mercado</li>
+                    <li>Bono por producción y desempeño</li>
+                    <li>Casa en uno de los campos</li>
                 </ul>
             </div>
         </div>
-        <div class="description-chips">
+        <!--<div class="description-chips">
             <div class="chip-viajar">
                 <p>Viajar dentro de Chile</p>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <div class="postulacion">
         <h3><b>Llena el siguiente formulario</b><br>
             para postular a este cargo.
         </h3>
-        <form id="contact-form" method="post" action="/send/" enctype="multipart/form-data">
+        <form id="contact-form" method="post" action="/send/" enctype="multipart/form-data" >
             <div>
-                <label id="code">001</label>
-                <label id="rol">Gerente Produccion</label>
+                <label id="code" value="001">001</label>
+                <label id="rol" value="Gerente Agrícola">Gerente Agrícola</label>
                 <h3>Datos personales</h3>
                 <div>
                     <label for="name">Nombre</label>
@@ -107,11 +122,11 @@
                 <h3>Disponibilidad a cambio de residencia</h3>
                 <div class="options-group">
                     <div class="option" for="si">
-                        <input type="radio" id="si" name="cambio-residencia" value="Si">
+                        <input type="radio" id="si" name="cambioResidencia" value="Si">
                         <label for="si">Si</label><br>
                     </div>
                     <div class="option">
-                        <input type="radio" id="no" name="cambio-residencia" value="No">
+                        <input type="radio" id="no" name="cambioResidencia" value="No">
                         <label for="no">No</label><br>
                     </div>
                 </div>
@@ -135,7 +150,7 @@
             </div>
 
             <label class="btn-secondary btn-full file-upload" for="file-upload" >Subir Curriculum <img src="img/document-upload.svg" alt=""></label>
-            <input id="file-upload" type="file" />
+            <input id="file-upload" type="file" accept=".jpg, .jpeg, .pdf, .doc" name="file"/>
 
             <button type="submit" class="btn-primary btn-full">Enviar</button>
         </form>

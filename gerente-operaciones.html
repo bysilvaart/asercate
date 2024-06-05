@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/trabajo.css">
+    <title>HeadHunters - Asercate</title>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">
+            <img src="img/logo.svg" alt="">
+        </a>
+        <img src="img/IconMenu.svg" alt="">
+    </nav>
+
+    <div class="banner">
+        <img src="img/LogoWhite.svg" alt="">
+    </div>
+
+    <div class="description">
+        <div class="description-chips">
+            <div class="chip-disponibilidad">
+                <img src="img/fire.svg" alt="">
+                <p>Disponibilidad inmediata</p>
+            </div>
+            <div class="chip-ingles">
+                <p>Inglés necesario</p>
+            </div>
+        </div>
+        <div class="description-texts">
+            <h1>Gerente de Operaciones</h1>
+            <p>Importante compañía en expansión busca profesional para programar las operaciones de la empresa, planificar mantención, velar por la seguridad industrial. Sumado a lo anterior debe gestionar certificaciones de inocuidad, negociar de servicios externos, desarrollar y controlar plan maestro de inversiones, gestionar KPI.
+                Reporta a Gerente General.
+            </p>
+            <div>
+                <h3>Requisitos:</h3>
+                <ul>
+                    <li>Ingeniero Civil Industrial o carrera afín</li>
+                    <li>Residencia en la VII región</li>
+                    <li>Inglés avanzado</li>
+                    <li>Experiencia comprobada mayor a 5 años</li>
+                    <li>Habilidades para trabajar bajo presión, en equipo y manejo de personal</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Se ofrece:</h3>
+                <ul>
+                    <li>Renta de mercado</li>
+                    <li>Bono por producción</li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="description-chips">
+            <div class="chip-viajar">
+                <p>Viajar dentro de Chile</p>
+            </div>
+        </div>-->
+    </div>
+
+    <div class="postulacion">
+        <h3><b>Llena el siguiente formulario</b><br>
+            para postular a este cargo.
+        </h3>
+        <form id="contact-form" method="post" action="/send/" enctype="multipart/form-data" >
+            <div>
+                <label id="code" value="002">002</label>
+                <label id="rol" value="Gerente de Operaciones">Gerente de Operaciones</label>
+                <h3>Datos personales</h3>
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="Ingresa tu nombre">
+                </div>
+                <div>
+                    <label for="lastname">Apellido</label>
+                    <input type="text" id="lastname" placeholder="Ingresa tu apellido">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ingresa tu email">
+                </div>
+                <div>
+                    <label for="comuna">Comuna de residencia</label>
+                    <input type="text" id="comuna" placeholder="Ingresa tu comuna">
+                </div>
+            </div>
+            <div>
+                <h3>Datos relacionados al puesto de trabajo</h3>
+                <div>
+                    <label for="profesion">Profesión</label>
+                    <input type="text" id="profesion" placeholder="Ingresa tu profesión">
+                </div>
+                <div>
+                    <label for="rent">Renta líquida esperada</label>
+                    <select name="rent" id="rent">
+                        <option value="De $2.000.000 a $3.000.000">De $2.000.000 a $3.000.000</option>
+                        <option value="De $3.000.000 a $4.000.000">De $3.000.000 a $4.000.000</option>
+                        <option value="De $4.000.000 a $5.000.000">De $4.000.000 a $5.000.000</option>
+                        <option value="Más de $5.000.000">Más de $5.000.000</option>
+                    </select>   
+                </div>
+                <div>
+                    <label for="experience">Años de experiencia</label>
+                    <select name="experience" id="experience">
+                        <option value="10 años">10 años</option>
+                        <option value="15 años">15 años</option>
+                        <option value="20 años">20 años</option>
+                        <option value="25 años">25 años</option>
+                        <option value="30 años">30 años</option>
+                    </select>   
+                </div>
+            </div>
+            <div class="options">
+                <h3>Disponibilidad a cambio de residencia</h3>
+                <div class="options-group">
+                    <div class="option" for="si">
+                        <input type="radio" id="si" name="cambioResidencia" value="Si">
+                        <label for="si">Si</label><br>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="no" name="cambioResidencia" value="No">
+                        <label for="no">No</label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <h3>Nivel de inglés</h3>
+                <div class="options-group">
+                    <div class="option">
+                        <input type="radio" id="basico" name="english" value="Básico">
+                        <label for="basico">Básico</label><br>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="medio" name="english" value="Medio">
+                        <label for="medio">Medio</label><br>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="alto" name="english" value="Alto">
+                        <label for="alto">Alto</label><br>
+                    </div>
+                </div>
+            </div>
+
+            <label class="btn-secondary btn-full file-upload" for="file-upload" >Subir Curriculum <img src="img/document-upload.svg" alt=""></label>
+            <input id="file-upload" type="file" accept=".jpg, .jpeg, .pdf, .doc" name="file"/>
+
+            <button type="submit" class="btn-primary btn-full">Enviar</button>
+        </form>
+        <div id="status"></div>
+    </div>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
