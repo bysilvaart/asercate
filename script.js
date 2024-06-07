@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        
         const code = document.getElementById('code').innerHTML;
         const rol = document.getElementById('rol').innerHTML;
         const name = document.getElementById('name').value;
@@ -58,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 file: fileData // Enviar el contenido del archivo como base64
             };
             
-            emailjs.send('service_phqxof8', 'template_agzjuwy', templateParams).then(function (response) {
+            emailjs.sendForm('service_phqxof8', 'template_agzjuwy', form).then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                     document.getElementById('status').innerHTML = 'Hemos enviado tu postulación';
-                    console.log(templateParams);
+                    console.log(form);
                     form.reset();
                 })
                 .catch(function (error) {
