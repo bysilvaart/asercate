@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const fileInput = document.querySelector('input[type="file"]');
         const file = fileInput.files[0]; // Obtener el primer archivo seleccionado
 
+        const modal = document.getElementById('modal_status');
+        var closeModal = document.getElementsByClassName("close-modal")[0];
+        modal.setAttribute('style', 'display: flex');
+        document.getElementById('status').innerHTML = 'Estamos enviando tu postulación';
+        closeModal.addEventListener("click",function() {
+            modal.setAttribute('style', 'display: none');
+          });
+
         // Verificar si se ha seleccionado un archivo
         if (file) {
             // Crear un FileReader
@@ -56,16 +64,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 english: english,
                 file: fileData // Enviar el contenido del archivo como base64
             };
+
             
             emailjs.sendForm('service_phqxof8', 'template_agzjuwy', form).then(function (response) {
                     console.log('SUCCESS!', response.status, response.text);
                     document.getElementById('status').innerHTML = 'Hemos enviado tu postulación';
+                    closeModal.setAttribute('style', 'display: flex');
                     console.log(form);
                     form.reset();
                 })
                 .catch(function (error) {
                     console.log('FAILED...', error);
                     document.getElementById('status').innerHTML = 'Tuvimos un error al enviar el mensaje';
+                    modal.setAttribute('style', 'display: flex');
                 });
         }
     });

@@ -219,4 +219,41 @@ input[type="file"] {
     gap: 8px;
 }
 
+#modal_status{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+}
+
+#modal_status .modal_container{
+    background-color: white;
+    width: 100%;
+    max-width: 360px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+
+    font-size: 24px;
+    font-weight: 600px;
+    text-align: center;
+    padding: 24px;
+}
+
+.close-modal{
+    display: none;
+}
+
   
